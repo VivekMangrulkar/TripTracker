@@ -63,3 +63,5 @@ C:\_vivek_workspace\Work\TripTracker\TripTrackerLive\TripTracker.BackService\bin
 C:\_vivek_workspace\Work\TripTracker\TripTrackerLive\TripTracker.BackService\obj\Debug\netcoreapp3.1\TripTracker.BackService.csproj.CoreCompileInputs.cache
 C:\_vivek_workspace\Work\TripTracker\TripTrackerLive\TripTracker.BackService\obj\Debug\netcoreapp3.1\TripTracker.BackService.MvcApplicationPartsAssemblyInfo.cs
 C:\_vivek_workspace\Work\TripTracker\TripTrackerLive\TripTracker.BackService\obj\Debug\netcoreapp3.1\TripTracker.BackService.MvcApplicationPartsAssemblyInfo.cache
+C:\_vivek_workspace\Work\TripTracker\TripTrackerLive\TripTracker.BackService\bin\Debug\netcoreapp3.1\TripTrackerDTO.dll
+C:\_vivek_workspace\Work\TripTracker\TripTrackerLive\TripTracker.BackService\bin\Debug\netcoreapp3.1\TripTrackerDTO.pdb

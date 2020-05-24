@@ -479,6 +479,19 @@
         "runtime": {
           "lib/netcoreapp3.0/System.Text.Json.dll": {}
         }
+      },
+      "TripTrackerDTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/TripTrackerDTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TripTrackerDTO.dll": {}
+        }
       }
     }
   },
@@ -1206,13 +1219,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "TripTrackerDTO/1.0.0": {
+      "type": "project",
+      "path": "../TripTrackerDTO/TripTrackerDTO.csproj",
+      "msbuildProject": "../TripTrackerDTO/TripTrackerDTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore >= 3.1.4",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.4",
-      "Swashbuckle.AspNetCore >= 5.4.1"
+      "Swashbuckle.AspNetCore >= 5.4.1",
+      "TripTrackerDTO >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1244,7 +1263,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\_vivek_workspace\\Work\\TripTracker\\TripTrackerLive\\TripTrackerDTO\\TripTrackerDTO.csproj": {
+              "projectPath": "C:\\_vivek_workspace\\Work\\TripTracker\\TripTrackerLive\\TripTrackerDTO\\TripTrackerDTO.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

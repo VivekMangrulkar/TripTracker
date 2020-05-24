@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using TripTracker.BackService.Data;
 using TripTracker.BackService.Models;
+using TripTrackerDTO;
 
 namespace TripTracker.BackService.Controllers
 {
@@ -25,19 +26,21 @@ namespace TripTracker.BackService.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
-            var trips = await _context.Trips.AsNoTracking().ToListAsync();
+            var trips = await _context.Trips
+                .AsNoTracking()              
+                .ToListAsync();
             return Ok(trips);
         }
 
         [HttpGet("{id}")]
-        public Trip Get(int id)
+        public Models.Trip Get(int id)
         {
             //return _repository.Get(id);
             return _context.Trips.Find(id);
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]Trip value)
+        public IActionResult Post([FromBody]Models.Trip value)
         {
             if(!ModelState.IsValid)
             {
@@ -51,7 +54,7 @@ namespace TripTracker.BackService.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task <IActionResult>PutAsync(int id, [FromBody]Trip value)
+        public async Task <IActionResult>PutAsync(int id, [FromBody]Models.Trip value)
         {
             if (!ModelState.IsValid)
             {
