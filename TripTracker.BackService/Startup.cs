@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using TripTracker.BackService.Data;
 
 namespace TripTracker.BackService
 {
@@ -19,7 +21,9 @@ namespace TripTracker.BackService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<Models.Repository>();
+            //services.AddTransient<Models.Repository>();
+            services.AddMvc();
+            services.AddDbContext<TripContext>(options => options.UseSqlite("DataSource = MyTrips.db"));
             services.AddSwaggerGen
                 (
                     options => options.SwaggerDoc("v1", new OpenApiInfo { Title = "Trip Tracker", Version = "v1" })
@@ -40,6 +44,10 @@ namespace TripTracker.BackService
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            //app.UseMvc();
+
+           TripContext.SeedData(app.ApplicationServices);
 
             app.UseHttpsRedirection();
 
